@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      var users = ["ram", "ravi", "kiran", "sam", "sudha", "raghu", "Abc"];
+      var oddValues = [];
+      var evenValues = [];
+
+      function displayOddValues() {
+        for (i = 0; i < users.length; i++) {
+          if (i % 2 == 0) {
+            evenValues.push(users[i]);
+          }
+        }
+        var results = "";
+        for (i = 0; i < evenValues.length; i++) {
+          results = results + evenValues[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML =
+          "All Even Values <br>" + results;
+      }
+      displayOddValues();
+    </script>
+  </body>
+</html>

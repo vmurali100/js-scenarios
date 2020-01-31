@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      div {
+        width: 100px;
+        float: left;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="even"></div>
+    <div id="odd"></div>
+    <script>
+      var oddNumbers = [];
+      var evenNumbers = [];
+
+      for (i = 0; i < 30; i++) {
+        if (i % 2 == 0) {
+          evenNumbers.push(i);
+        } else {
+          oddNumbers.push(i);
+        }
+      }
+
+      function printEvenNumbers() {
+        var allNos = "";
+        for (i = 0; i < evenNumbers.length; i++) {
+          allNos = allNos + evenNumbers[i] + "<br>";
+        }
+
+        document.getElementById("even").innerHTML = allNos;
+      }
+
+      printEvenNumbers();
+
+      function printOddNumbers() {
+        var allOddNums = "";
+
+        for (i = 0; i < oddNumbers.length; i++) {
+          allOddNums = allOddNums + oddNumbers[i] + "<br>";
+        }
+
+        document.getElementById("odd").innerHTML = allOddNums;
+      }
+
+      printOddNumbers();
+    </script>
+  </body>
+</html>
